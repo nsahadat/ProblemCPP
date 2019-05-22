@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1558475241 source:d:\github\problemcpp\linkedlist\src\node.cpp
+	"Node.h"
+	<iostream>
+
+1558475250 d:\github\problemcpp\linkedlist\include\node.h
+
+1558479412 source:d:\github\problemcpp\linkedlist\main.cpp
+	<iostream>
+
