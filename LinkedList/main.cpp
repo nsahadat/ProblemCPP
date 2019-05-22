@@ -6,17 +6,12 @@ class Node
     public:
         int val;
         Node *next;
-
-
         Node(int Val);
-        //virtual ~Node();
-        void traverseList(Node *n);
-        void reverseList(Node *current);
-
-    //protected:
-
-    //private:
 };
+
+void traverseList(Node *n);
+void reverseList(Node *current);
+void insertion ();
 
 
 int main()
@@ -25,8 +20,8 @@ int main()
 
     //cout << "Hello world!" << endl;
     //Node *head, *n1, *n2, *n3, *tail;   // initialize it
-    int len = 20;
-    Node *n[len];
+  //  int len = 20;
+   // Node *n[len];
 
 /*
     // creating the nodes
@@ -36,22 +31,23 @@ int main()
     n3 = new Node();
     tail = new Node();
  */
+ /*
     for (int i=0;i<len; i++)
     {
         n[i] = new Node(i);
     }
-
+*/
     // populate the linked list
-
+/*
     for (int i=0;i<len; i++)
     {
         //n[i]->val = i + 1;
         n[i]->next = n[i+1];
     }
-
+*/
     //n[len] = new Node();
     //n[len]->val = len + 1;
-    n[len-1]->next = NULL;
+ //   n[len-1]->next = NULL;
 
 /*
     head->val = 0;
@@ -78,15 +74,35 @@ int main()
     n3 = new Node(3, tail);
     tail = new Node(4, NULL);
     */
-    Node LL(0);
-    LL.traverseList(n[0]);
-    LL.reverseList(n[0]);
-    LL.traverseList(n[19]);
+
+
+    Node *head = new Node(2);  // creating head
+    Node *current;              // progressing
+    current = head;
+    current->next = new Node(10);
+    current = current->next;
+
+    current->next = new Node(20);
+    current = current->next;
+
+    current->next = new Node(30);
+    current = current->next;
+
+
+
+    traverseList(head);
+    //reverseList(n[0]);
+    //traverseList(n[19]);
+
+
+
+
+
 
     return 0;
 }
 
-void Node:: traverseList(Node *n)
+void traverseList(Node *n)
 {
     using namespace std;
     while (n != NULL)
@@ -96,7 +112,7 @@ void Node:: traverseList(Node *n)
     }
 }
 
-void Node:: reverseList(Node *current)
+void reverseList(Node *current)
 {
     Node *prev = NULL, *next = NULL;
 
@@ -117,6 +133,11 @@ Node::Node(int Val)
 {
     val = Val;
     next = NULL;
+}
+
+void insertion()
+{
+
 }
 
 
