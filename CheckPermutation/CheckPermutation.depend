@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1558722955 source:d:\github\problemcpp\checkpermutation\main.cpp
+	<iostream>
+	<algorithm>
+
